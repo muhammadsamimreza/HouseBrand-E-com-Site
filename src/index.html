@@ -7,17 +7,18 @@
   <link href="./output.css" rel="stylesheet">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="../assets/fontawesome-free-6.5.2-web/css/all.min.css">
 </head>
 
 <body>
   <section id="hero" style="background-image: url(../images/banner.png);">
     <div id="HeroMain" class="relative container mx-auto w-full h-screen">
       <div id="navBar" class="absolute w-full top-0 p-3">
-        <div id="navContent" class="flex flex-row justify-between items-center">
+        <div id="" class="flex flex-row justify-between items-center">
           <div id="logo">
             <img class="w-32" src="../images/logo.png" alt="logo">
           </div>
-          <div id="menu" class="flex flex-row gap-10 text-white text-xl">
+          <div id="navContent" class="hidden lg:flex flex-row gap-10 text-white text-xl">
 
             <div>Home</div>
             <div>Shop</div>
@@ -26,7 +27,7 @@
             <div>Contact</div>
 
           </div>
-          <div id="icon" class="flex flex-row gap-5 text-white items-center ">
+          <div id="icon" class="hidden lg:flex lg:flex-row lg:gap-5 text-white lg:items-center ">
             <div id="SearchIcon"><span class="material-symbols-outlined ">
                 search
               </span>
@@ -46,8 +47,20 @@
               </span>
             </div>
           </div>
+
+          <div id="menu" onclick="showMenu()"
+            class="lg:hidden bg-green-500 hover:bg-green-600 px-2 py-1 rounded-md shadow-md shadow-white">
+            <span id="navMenuButtonOn"><i class="fa-solid fa-bars text-3xl text-white"></i></span>
+            <span class="hidden" id="navMenuButtonOff"><i class="fa-solid fa-xmark text-3xl text-white "></i></span>
+          </div>
+
         </div>
+
+
+
       </div>
+
+
       <div id="HeroContent" class="grid w-full h-full place-content-center">
         <div id="ContentBox" class="flex flex-col gap-5">
           <div id="heading" class="w-[70%] mx-auto text-center text-[#D29712] font-bold">
@@ -59,31 +72,33 @@
                 modi
                 excepturi pariatur!</h1>
             </div>
-          <button id="submit">
-            <div id="button" class="flex place-content-center items-center">
-              <div class="min-w-56 max-w-56 min-h-16 overflow-hidden group cursor-pointer">
-                <div class="min-w-56 max-w-52 min-h-16 flex -translate-x-14 group-hover:-translate-x-8 transition-all">
+            <button id="submit">
+              <div id="button" class="flex place-content-center items-center">
+                <div class="min-w-56 max-w-56 min-h-16 overflow-hidden group cursor-pointer">
                   <div
-                    class="min-w-14 max-w-14 min-h-10 group-hover:bg-[#D29712] group-hover:translate-x-5 grid place-content-center">
-                    <span class="material-symbols-outlined text-white text-3xl font-semibold">
-                      shopping_cart
-                    </span>
-                  </div>
-                  <div class="min-w-56 max-w-52 min-h-16 bg-[#D29712] group-hover:bg-white grid text-center place-content-center">
-                    <span class="group-hover: transition-all flex flex-row items-center gap-2 ml-8">
-                      <span
-                        class="font-semibold grid place-content-center justify-center text-xl text-white group-hover:text-[#D29712] group-hover:bg-white">BUY
-                        NOW</span>
-                      <span
-                        class="material-symbols-outlined flex flex-row items-center font-semibold text-xl text-white group-hover:text-[#D29712] opacity-0 group-hover:opacity-100 transition-all">
-                        arrow_right_alt
+                    class="min-w-56 max-w-52 min-h-16 flex -translate-x-14 group-hover:-translate-x-8 transition-all">
+                    <div
+                      class="min-w-14 max-w-14 min-h-10 group-hover:bg-[#D29712] group-hover:translate-x-5 grid place-content-center">
+                      <span class="material-symbols-outlined text-white text-3xl font-semibold">
+                        shopping_cart
                       </span>
-                    </span>
+                    </div>
+                    <div
+                      class="min-w-56 max-w-52 min-h-16 bg-[#D29712] group-hover:bg-white grid text-center place-content-center">
+                      <span class="group-hover: transition-all flex flex-row items-center gap-2 ml-8">
+                        <span
+                          class="font-semibold grid place-content-center justify-center text-xl text-white group-hover:text-[#D29712] group-hover:bg-white">BUY
+                          NOW</span>
+                        <span
+                          class="material-symbols-outlined flex flex-row items-center font-semibold text-xl text-white group-hover:text-[#D29712] opacity-0 group-hover:opacity-100 transition-all">
+                          arrow_right_alt
+                        </span>
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </button>
+            </button>
 
           </div>
         </div>
@@ -195,7 +210,7 @@
           <div id="image_2" class="relative">
             <img class="w-[369px] h-[390px]" src="../images/Trand_product/chair3.jpg" alt="">
             <div id="percent" class="absolute top-2 px-2 py-1 rounded-e-lg text-white bg-[#D29712]">-10%</div>
-            
+
             <div id="icon" class="absolute flex flex-col gap-4 right-3 top-[55%]">
               <div id="love_icon" class=" text-white ">
                 <span class="bg-white text-red-500 p-2 rounded-full material-symbols-outlined">
@@ -289,6 +304,7 @@
       </div>
     </div>
   </section>
+  <script src="./main.js"></script>
 </body>
 
 </html>
